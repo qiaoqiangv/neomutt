@@ -23,7 +23,8 @@
 #include <sys/types.h>
 #include <time.h>
 
-/* ACL Rights */
+#define HDR_OF(index) Context->hdrs[Context->v2r[(index)]]
+
 enum
 {
   MUTT_ACL_LOOKUP = 0,

@@ -196,10 +196,10 @@ WHERE const char *GitVer;
 
 WHERE struct Hash *Groups;
 WHERE struct Hash *ReverseAlias;
-#ifdef USE_NOTMUCH
+
+WHERE char *HiddenTags;
 WHERE struct Hash *TagTransforms;
 WHERE struct Hash *TagFormats;
-#endif
 
 WHERE struct List *AutoViewList INITVAL(0);
 WHERE struct List *AlternativeOrderList INITVAL(0);
@@ -329,7 +329,6 @@ WHERE int NotmuchOpenTimeout;
 WHERE char *NotmuchDefaultUri;
 WHERE char *NotmuchExcludeTags;
 WHERE char *NotmuchUnreadTag;
-WHERE char *NotmuchHiddenTags;
 WHERE char *VirtFolderFormat;
 WHERE int NotmuchDBLimit;
 WHERE char *NotmuchQueryType;

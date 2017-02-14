@@ -180,6 +180,7 @@ void mutt_remove_trailing_ws(char *s);
 void mutt_sanitize_filename(char *f, short slash);
 void mutt_str_replace(char **p, const char *s);
 void mutt_str_adjust(char **p);
+void mutt_str_append_item(char **str, const char *item, int sep);
 void mutt_unlink(const char *s);
 void safe_free(void *ptr);
 void safe_realloc(void *ptr, size_t siz);

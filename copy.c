@@ -35,6 +35,7 @@
 #include "mime.h"
 #include "mutt_curses.h"
 #include "mutt_idna.h"
+#include "mutt_tags.h"
 #include "mx.h"
 #include "ncrypt/ncrypt.h"
 #include "options.h"
@@ -443,7 +444,7 @@ int mutt_copy_header(FILE *in, struct Header *h, FILE *out, int flags, const cha
       fputs(buf, out);
       fputc('\n', out);
     }
-    char *tags = nm_header_get_tags(h);
+    const char *tags = hdr_tags_get(h);
     if (tags && !(option(OPTWEED) && mutt_matches_ignore("tags")))
     {
       fputs("Tags: ", out);
