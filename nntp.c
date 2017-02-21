@@ -2413,4 +2413,6 @@ struct MxOps mx_nntp_ops = {
   .close_msg = nntp_close_message,
   .commit_msg = NULL,
   .open_new_msg = NULL,
+  .edit_msg_tags = NULL,
+  .commit_msg_tags = NULL,
 };
